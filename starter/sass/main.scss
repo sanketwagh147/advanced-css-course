@@ -1,14 +1,13 @@
+
 /*
 COLORS:
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
 */
-:root {
-	--light-green: #7ed56f;
-	--medium-green: #55c57a;
-	--dark-green: #28b485;
-}
+$color-primary: #7ed56f;
+$color-primary-light: #55c57a;
+$color-primary-dark: #28b485;
 
 *,
 *::after,
@@ -34,8 +33,8 @@ body {
 	height: 95vh;
 	background-image: linear-gradient(
 			to right bottom,
-			hsla(111, 55%, 64%, 0.8),
-			hsla(160, 64%, 43%, 0.8)
+            rgba($color-primary-light, 0.8)
+            rgba($color-primary-dark, 0.8)
 		),
 		url("../img/hero.jpg");
 	background-size: cover;
