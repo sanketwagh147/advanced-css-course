@@ -1,0 +1,49 @@
+.form {
+	&__group:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+
+	&__input {
+		font-size: 1.5rem;
+		padding: 1.5rem 2rem;
+		border-radius: 3px;
+		background-color: rgba($color: $color-white, $alpha: 0.5);
+		border: none;
+		color: inherit;
+		font-family: inherit;
+		border-bottom: 3px solid transparent;
+		width: 90%;
+		display: block;
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 1rem 2rem rgba($color: $color-black, $alpha: 0.1);
+			border-bottom: 3px solid $color-primary;
+
+			&:invalid {
+				border-bottom: 3px solid $color-secondary-dark;
+			}
+		}
+
+		&::-webkit-input-placeholder {
+			color: $color-grey-dark-2;
+		}
+	}
+
+	&__label {
+		font-size: 1.2rem;
+		font-weight: 700;
+		margin-left: 2rem;
+		margin-top: 0.7rem;
+		display: block;
+		transition: all 0.3s;
+	}
+
+	// + is the adjacent sibbling
+	// ~ is the general sibbling
+	&__input:placeholder-shown + &__label {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-4rem);
+	}
+}
