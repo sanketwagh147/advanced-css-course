@@ -322,7 +322,8 @@ body {
   padding: 6rem;
   padding-left: 9rem;
   font-size: 1.6rem;
-  transform: skewX(-12deg); }
+  transform: skewX(-12deg);
+  background-color: rgba(255, 255, 255, 0.6); }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -356,6 +357,20 @@ body {
   .story:hover .story__image {
     transform: translateX(-4rem) scale(1);
     filter: blur(3px) brightness(80%); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1000;
+  opacity: .15;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
 
 .header {
   height: 95vh;
@@ -425,5 +440,5 @@ body {
   margin-top: -10rem; }
 
 .section-stories {
-  padding: 15rem 0;
-  background-color: #f7f7f7; }
+  position: relative;
+  padding: 15rem 0; }
