@@ -12,6 +12,8 @@
 	clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
 	position: relative;
 
+	// @supports watch this : https://www.udemy.com/course/advanced-css-and-sass/learn/lecture/8274566#overview
+
 	// , (comma is equivalent to or in media query)
 	@media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
 		background-image: linear-gradient(
