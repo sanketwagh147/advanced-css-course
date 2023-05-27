@@ -1,24 +1,33 @@
 {
   "name": "Nexter",
   "version": "1.0.0",
-  "description": "Nexter webpage",
+  "description": "Nexter app",
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "devserver": "live-server",
-    "start": "npm-run-all --parallel devserver watch:sass",
+    "dev-server": "live-server --browser=firefox",
+    "start": "npm-run-all --parallel dev-server watch:sass",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
-    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "prefix:css": "postcss css/style.comp.css -o css/styles.prefix.css",
+    "compress:css": "node-sass css/styles.prefix.css css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
-  "author": "Sanket Wagh",
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "sanket wagh",
   "license": "ISC",
+  "browserslist": "last 10 versions",
   "devDependencies": {
-    "autoprefixer": "^7.1.4",
+    "autoprefixer": "^10.4.14",
     "concat": "^1.0.3",
-    "node-sass": "^4.5.3",
-    "npm-run-all": "^4.1.1",
-    "postcss-cli": "^4.1.1"
+    "node-sass": "^8.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.23",
+    "postcss-cli": "^10.1.0"
   }
 }
